@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر إلكتروني</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">متجري</div>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#products">المنتجات</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+        <li><a href="#cart">عربة التسوق</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home">
+    <div class="banner">
+      <h1>أهلاً بك في متجرنا الإلكتروني</h1>
+      <p>أفضل العروض والمنتجات بجودة عالية!</p>
+      <a href="#products" class="btn">تصفح الآن</a>
+    </div>
+  </section>
+  <section id="products">
+    <h2>منتجاتنا</h2>
+    <div class="product-list">
+      <!-- المنتجات -->
+      <div class="product">
+        <img src="product1.jpg" alt="منتج 1">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <span>السعر: $20</span>
+        <button class="add-to-cart">إضافة إلى العربة</button>
+      </div>
+      <div class="product">
+        <img src="product2.jpg" alt="منتج 2">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <span>السعر: $15</span>
+        <button class="add-to-cart">إضافة إلى العربة</button>
+      </div>
+    </div>
+  </section>
+  <footer id="contact">
+    <p>© 2024 جميع الحقوق محفوظة</p>
+    <p>اتصل بنا: info@myshop.com</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+/* ملف style.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #ff5722;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.banner {
+  text-align: center;
+  background: linear-gradient(to right, #ff5722, #ff9800);
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+}
+
+.banner .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #fff;
+  color: #ff5722;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#products {
+  padding: 2rem;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.add-to-cart {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+// ملف script.js
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    alert('تمت إضافة المنتج إلى العربة!');
+  });
+});
